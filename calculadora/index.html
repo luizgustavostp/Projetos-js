@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div id="listadecalcs">
+        <div id="navzona">
+            <button id="btnsair"><i class="fa-solid fa-arrow-left"></i></button>
+        </div>
+
+    </div>
+    <section id="result">
+        <p id="calculo"></p>
+        <p id="resultado"></p>
+    </section>
+    <section id="display">
+       
+    <section id="buttons">
+        <button id="div1" onclick="adicionar(`1`)">1</button>
+        <button id="div2" onclick="adicionar(`2`)">2</button>
+        <button id="div3" onclick="adicionar(`3`)">3</button>
+        <button id="div4" onclick="adicionar(`4`)">4</button>
+        <button id="div5" onclick="adicionar(5)">5</button>
+        <button id="div6" onclick="adicionar(6)">6</button>
+        <button id="div7" onclick="adicionar(7)">7</button>
+        <button id="div8" onclick="adicionar(8)">8</button>
+        <button id="div9" onclick="adicionar(9)">9</button>
+        <button id="div10" onclick="adicionar(0)">0</button>
+    </section>
+    <aside id="operations">
+        <button id="soma" onclick="adicionar(`+`)">+</button>
+        <button id="diminuir" onclick="adicionar(`-`)">-</button>
+        <button id="vezes" onclick="adicionar(`*`)">x</button>
+        <button id="dividido" onclick="adicionar(`/`)">/</button>
+    
+    </aside>
+        <aside id="coisas">
+        <button id="C" onclick="clr()"><i class="fa-solid fa-trash"></i></button>
+        <button id="mns" onclick="mns()"><i class="fa-solid fa-arrow-left"></i></button>
+        <button id="calcs"><i class="fa-solid fa-list"></i></button>
+        <button id="igual" onclick="result()">=</button>
+    </aside>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
