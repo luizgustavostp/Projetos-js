@@ -2,7 +2,7 @@
 @keyframes seila {
     
     100% {
-        transform: scaleY(1);
+        opacity: 1;
     }
 }
 html {
@@ -14,17 +14,20 @@ html {
     justify-content: center;
     font-family: sans-serif;
 }
-
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 section {
     margin: auto;
     input {
         border-radius: 23px;
-        font-size: 1.6em;
+        font-size: 1em;
         text-indent: 24px;
-        height: 80px;
-        width: 500px;
+        height: 40px;
+        width: 300px;
         border: 0;
-        margin: auto;
     }
     input:focus,input:hover {
         outline: 0;
@@ -32,7 +35,7 @@ section {
     }
 }
 #Humidade {
-    font-size: 2em;
+    font-size: 1.5em;
     color: black;
     font-family: "Cal Sans";
 }
@@ -40,34 +43,34 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.2em;
+    font-size: 1em;
     margin: 20px 0 0 0;
     width: 85%;
 }
 #clima {
-    height: 300px;
-    width: 300px;
+    height: 100px;
+    width: 100px;
 }
 #humidadediv2 {
     display: flex;
     align-items: center;
 }
 #temperatura {
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: "Cal Sans";
-}
+}   
 #sensaçãotermica {
     font-size: 1.4em;
 }
 #cidade {
     font-family: "Cal Sans";
     font-weight: 600;
-    font-size: 2em;
+    font-size: 1.6em;
     color: rgb(24, 23, 23);
 }
 button {
-    height: 70px;
-    width: 70px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     font-size: 1.5em;
     border: none;
@@ -79,11 +82,13 @@ button:hover {
 }
 div#display {
     background-color: white;
-    height: 600px;
-    width: 500px;
+    height: 450px;
+    width: 400px;
     border-radius: 25px;
-    transform: scaleY(0);
-    justify-items: center;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     animation-name: seila;
     animation-duration: 0.3s;
@@ -95,3 +100,8 @@ div#display {
         transition: 0.3s ease;
      }
     }
+@media (max-width:500px) {
+    * {
+        scale: 0.98 ;
+    }
+}

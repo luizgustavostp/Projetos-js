@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo APP | lista de afazeres 📃</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link id="favicon" rel="shortcut icon" href="source/images/logos/logo-blue.png" type="image/x-icon">
+    <link rel="stylesheet" href="source/estilos/style.css">
+</head>
+<body>
+    <!--escolher novo usuário a caso não tenha-->
+    <section id="escolhauser">
+
+        <p>escolha um novo nome de usuário!</p>
+        <span id="span-input">
+
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="" id="usernome" placeholder="Escolha um novo nome de usuário">
+
+            <button id="deletartext">X</button>    
+
+        </span>
+        <!--submit para escolher o usuário, button que ativa a função -->
+        <button id="escolhauserbtn">submit</button>
+    </section>
+    <!--display de configurações -->
+    <section id="config_display">
+        <!-- seleção de temas no app-->
+        <p id="selecionar_thema">Selecionar tema</p>
+        <select>
+            <option value="0">blue theme</option>
+            <option value="1">purple theme</option>
+            <option value="2">green theme</option>
+            <option value="3">black theme</option>
+        </select>
+        <!--selecionar cor de fundo-->
+        <p id="para_cordefundo">Selecione sua cor de fundo</p>
+        <input type="color" name="cor" id="cor">
+        <!--selecionar nome de usuário novamente -->
+        <p id="chose_user">Escolha seu nome de usuário</p>
+        <input type="text" name="user" id="user" placeholder="seu nome de usuário" >
+        <button id="submit_config">apply</button>
+        <!--button de sair das configurações-->
+        <button id="quit_config">X</button>
+    </section>
+    <main>
+
+
+        <!--navegaçao (button de config e nome de user)-->
+        <div id="top_svg">
+            <div id="nav"><button id="config"><i class="fa-solid fa-gear"></i></button>
+            <h1 id="tittle"><span id="username">USERNAME´S</span> LISTS</h1>
+            </div>
+        </div>
+        <!--display das listas configuradas-->
+        <section id="display_listas">
+        </section>
+        <button id="adicionarlista">+</button>
+    <section id="addlist"> 
+        <button id="quitcriarlista">X</button>
+        <p>Nome da lista:</p>
+        <div id="spanlistaname"><i class="fa-solid fa-pencil"></i><input type="text" name="listaname" id="listaname"></div>
+        <p>insira seu tipo de lista: </p>
+        <select name="tipodelista" id="tipodelista">
+            <option value="0">Casa</option>
+            <option value="1">Escola</option>
+            <option value="2">Faculdade</option>
+            <option value="3">Trabalho</option>
+            <option value="4">Saúde</option>
+        </select>
+        <p>Insira seu icon</p>
+        <select name="emojis" id="emojis">
+            <option value="0">🏠</option>
+            <option value="1">🏫</option>
+            <option value="2">👜</option>
+            <option value="3">🍎</option>
+            <option value="4">💄</option>
+            <option value="5">🏀</option>
+            <option value="6">🛠</option>
+            <option value="7">📖</option>
+        </select>
+        <button id="submitlista">adicionar</button>
+    </section>
+    <div id="loading_div">
+        <div id="loading"></div>
+    </div>
+    </main>
+    <div id="blur"></div>
+    <script src="source/scripts/app.js"></script>
+    <script src="source/scripts/index.js"></script>
+
+</body>
+</html>

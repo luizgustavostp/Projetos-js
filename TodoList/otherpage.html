@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="source/estilos/otherpage.css">
+    <link id="favicon" rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="source/estilos/style.css">
+</head>
+<body>
+    <main>
+        <!-- navbar que fica em cima da pagina -->
+         <div id="top_svg">
+            <div id="nav"><button id="config"><i class="fa-solid fa-gear"></i></button>
+            <h1 id="tittle"><span id="username">USERNAME´S</span> LISTS</h1>
+            </div>
+        </div>
+        <!-- display de configurações -->
+        <section id="config_display">
+            <!-- seleção de temas na configuração-->
+            <p id="selecionar_thema">Selecionar tema</p>
+            <select>
+                <option value="0">blue theme</option>
+                <option value="1">purple theme</option>
+                <option value="2">green theme</option>
+                <option value="3">black theme</option>
+            </select>
+            <!--seleção de cor de fundo-->
+            <p id="para_cordefundo">Selecione sua cor de fundo</p>
+            <input type="color" name="cor" id="cor">
+            <!-- seleção de username -->
+            <p id="chose_user">Escolha seu nome de usuário</p>
+            <input type="text" name="user" id="user" placeholder="seu nome de usuário" >
+            <!--button de apply-->
+            <button id="submit_config">apply</button>
+            <button id="quit_config">X</button>
+    </section>
+        <section id="tarefas">
+            <!-- painel de tarefas-->
+            <ul id="lista">
+            </ul>
+            <!-- display do loading -->
+                <div id="loading_div">
+        <div id="loading"></div>
+    </div>
+    
+        </section>
+        <!-- display de adicionar tarefas -->
+        <section id="adicionartarefas">
+            <p id="nometaref">Nome da tarefa: </p>
+            <input type="text" name="inputnometaref" id="inputnometaref">
+            <button id="tarefaadd">add</button>
+        </section>
+        <!--button de abrir o display de adicionar tarefas -->
+        <button id="adicionar"><i class="fa-solid fa-pen"></i></button>
+        <div id="blur"></div>
+    </main>
+    <script src="source/scripts/lista.js"></script>
+</body>
+</html>

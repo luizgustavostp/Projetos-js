@@ -5,6 +5,7 @@
 body,html {
     height: 99vh;
     width: 99vw;
+    background-color: rgb(38, 38, 38);
 }
 #buttons {
     display: grid;
@@ -59,7 +60,7 @@ button::selection {
     width: fit-content;
     display: flex;
     gap: 20px;
-    scale: 1.1;
+    scale: 1;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -89,6 +90,7 @@ button::selection {
         margin: 0;
         padding: 0px 10%;
         font-family: sans-serif;
+        background: white;
     }
 }
 button {
@@ -97,47 +99,49 @@ button {
 button:hover {
     backdrop-filter: opacity(0.8);
 }
-#listadecalcs { 
-    height: 500px;
-    width:500px;
-    padding: 0px 50px;
-    position: absolute;
+#calculos {
+    height: 350px;
+    width: 350px;
+    outline: 1px solid black
+    ;
+    padding: 10px 42px;
+    background-color:rgb(78, 78, 78) ;
+    border-radius: 15px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: rgb(155, 155, 155);
+    position: absolute;
     z-index: 3;
-    border-radius: 18px;
-    align-items: start;
-    display: none;
-    justify-content: start;
-    flex-direction: column;
-    p {
-        font-size: 2em;
-        color: black;
-        width: 80%;
-        outline: 1px solid black;
-        margin: 0px 0px 0px 40px !important;
-
+    transform: translate(-50%,-50%);
+    overflow: scroll;
+    button {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
     }
 }
-.active {
-    display: flex !important;
+#calculos::-webkit-scrollbar {
+    background: transparent;
 }
-#navzona {
-    height:100px;
-    width: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: start;
+.actived {
+    display: none !important;
 }
-#btnsair {
-    height: 50px;
-    width: 50px;
-    padding: 10px;
-    border-radius: 50%;
-    background-color: rgb(255, 68, 0);
-    color: white;
+#listadecalculos {
+    
+    
+    p {
+        padding: 10px;
+        border: 1px solid black;
+        height: 20px;
+        text-align: start;
+        text-indent: 16px;
+        background-color: green;
+    }
+}
+#listadecalculos::-webkit-scrollbar,#listadecalculos::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+i {
+    pointer-events: none;
 }
 @media (max-width:560px) {
     #display {

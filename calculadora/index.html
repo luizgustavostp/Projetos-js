@@ -8,12 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-    <div id="listadecalcs">
-        <div id="navzona">
-            <button id="btnsair"><i class="fa-solid fa-arrow-left"></i></button>
-        </div>
-
-    </div>
+    <section id="calculos">
+        <div id="buttonss"><button id="button-sair">x</button></div>
+        <div id="listadecalculos"></div>
+    </section>
     <section id="result">
         <p id="calculo"></p>
         <p id="resultado"></p>
@@ -42,7 +40,7 @@
         <aside id="coisas">
         <button id="C" onclick="clr()"><i class="fa-solid fa-trash"></i></button>
         <button id="mns" onclick="mns()"><i class="fa-solid fa-arrow-left"></i></button>
-        <button id="calcs"><i class="fa-solid fa-list"></i></button>
+        <button id="calcs" onclick="verifybox()"><i class="fa-solid fa-list" ></i></button>
         <button id="igual" onclick="result()">=</button>
     </aside>
     </section>
