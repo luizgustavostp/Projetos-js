@@ -84,40 +84,7 @@ function carregar() {
     });
 }
 
-function eventTarefas() {
-    let tarefas = document.getElementsByClassName(`paragraph`)
-    
-    for (let i = 0; i<tarefas.length;i++) {
-        tarefas[i].addEventListener(`click`, event => {
-            
-            console.log(event)
-            let elemento = event.target
-            let circle = event.target.previousElementSibling
-            console.log(circle)
-            if (elemento.classList.contains(`active`)) {
-                elemento.classList.remove(`active`)
-                circle.setAttribute(`class`,`fa-regular fa-circle`)
-                
-            }
-            else {
-                elemento.classList.add(`active`)
-                
-                circle.setAttribute(`class`,`fa-solid fa-circle-check`)
-            }
-            salvardata()
-        })
-        
-    }
-    let buttonsesc = document.getElementsByClassName(`tlgdne`)
-   
-        console.log(buttonsesc)
-        for (let a = 0;a < buttonsesc.length;a++) {
-        buttonsesc[a].addEventListener(`click`,event => {
-            event.target.offsetParent.remove()
-            salvardata()
-        })
-        }
-    }
+
 function applyuser() {
         let userinput = document.querySelector(`#user`)
         let username = document.querySelector(`#username`)
@@ -268,3 +235,37 @@ tarefaadd.addEventListener(`click`,() => {
 let buttonsexcluir = document.getElementsByClassName(`tlgdne`)
 carregarTarefas()
 eventTarefas()
+function eventTarefas() {
+    let tarefas = document.getElementsByClassName(`paragraph`)
+    
+    for (let i = 0; i<tarefas.length;i++) {
+        tarefas[i].addEventListener(`click`, event => {
+            
+            console.log(event)
+            let elemento = event.target
+            let circle = event.target.previousElementSibling
+            console.log(circle)
+            if (elemento.classList.contains(`active`)) {
+                elemento.classList.remove(`active`)
+                circle.setAttribute(`class`,`fa-regular fa-circle`)
+                
+            }
+            else {
+                elemento.classList.add(`active`)
+                
+                circle.setAttribute(`class`,`fa-solid fa-circle-check`)
+            }
+            salvardata()
+        })
+        
+    }
+    let buttonsesc = document.getElementsByClassName(`tlgdne`)
+   
+        console.log(buttonsesc)
+        for (let a = 0;a < buttonsesc.length;a++) {
+        buttonsesc[a].addEventListener(`click`,event => {
+            event.target.offsetParent.remove()
+            salvardata()
+        })
+        }
+    }
